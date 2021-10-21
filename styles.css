@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --grey: #E1E1E6;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto';
+  color: var(--grey);
+  -webkit-font-smoothing: antialiased;
+  background: #202024;
+}
+
+main {
+  background: url(assets/Mobile.png);
+  width: 375px;
+  height: 812px;
+  display: flex;
+  justify-content: center;
+  margin:auto;
+}
+
+header {
+  display: none;
+}
+
+.container {
+  max-width: 250px;
+  text-align: center;
+}
+
+.avatar {
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+
+  animation: spin 5000ms infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.avatar .perfil {
+  height: 11.5rem;
+  width: 10rem;
+  object-fit: cover;
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1 {
+  margin-top: 24px;
+}
+
+.github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 4px;
+}
+
+.github p {
+  margin-left: 10px;
+}
+
+.description {
+  margin-top: 24px;
+}
+
+.social {
+  margin-top: 100px;
+}
+
+.social ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media (min-width: 580px) {
+  body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  main {
+    margin-top: -19rem;
+  }
+   
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .degrade,
+  .faixa {
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .faixa {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .quebra {
+    top: 4rem;
+  }
+
+  
+}
